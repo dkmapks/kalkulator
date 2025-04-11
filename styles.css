@@ -1,0 +1,94 @@
+/* Import czcionki */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+body {
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  background-image: url('https://i.imgur.com/0f4XQbC.png'); /* Serduszka */
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff3d54;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Animacja dla brzydkiego efektu */
+.shake {
+  animation: shake 0.5s ease-in-out infinite;
+  color: red;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 1em;
+  color: #fff;
+}
