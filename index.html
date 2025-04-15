@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symulator Developera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Symulator Developera Domów i Mieszkań</h1>
+    <div id="stats">
+      <p>Twoje pieniądze: <span id="money">200000</span> zł</p>
+      <p>Kredyt do spłaty: <span id="loan">0</span> zł</p>
+    </div>
+    <button onclick="generateProperty()">Generuj Nieruchomość</button>
+    <div id="properties"></div>
+    <div id="bank">
+      <h2>Bank</h2>
+      <button onclick="takeLoan()">Weź Kredyt</button>
+      <input id="loanAmount" type="number" placeholder="Kwota kredytu">
+      <button onclick="depositSavings()">Załóż Lokatę (5%)</button>
+      <input id="savingsAmount" type="number" placeholder="Kwota lokaty">
+    </div>
+    <div id="modMenu">
+      <h2>Mod Menu</h2>
+      <input id="modCode" type="password" placeholder="Kod dostępu">
+      <button onclick="activateMod()">Aktywuj Mod Menu</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
