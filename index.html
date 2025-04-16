@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Zarobków na YouTube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulator Zarobków na YouTube</h1>
+    <form id="calculator-form">
+        <label for="views">Wpisz liczbę wyświetleń:</label>
+        <input type="number" id="views" placeholder="np. 1000000" required>
+        <br><br>
+        <label for="cpm">CPM (zł za 1000 wyświetleń):</label>
+        <input type="number" id="cpm" placeholder="np. 5" required>
+        <br><br>
+        <label for="type">Typ filmu:</label>
+        <select id="type">
+            <option value="standard">Bez teledysku</option>
+            <option value="music">Teledysk (+20%)</option>
+        </select>
+        <br><br>
+        <label for="label-deal">Czy współpracujesz z wytwórnią?</label>
+        <input type="checkbox" id="label-deal">
+        <br><br>
+        <label for="bonus">Premia (w zł):</label>
+        <input type="number" id="bonus" placeholder="np. 100" value="0">
+        <br><br>
+        <label for="debt">Dług wobec wytwórni (w zł):</label>
+        <input type="number" id="debt" placeholder="np. 5000" value="0">
+        <br><br>
+        <label for="repayment">Procent zarobków na spłatę długu (%):</label>
+        <input type="number" id="repayment" placeholder="np. 20" value="0">
+        <br><br>
+        <button type="button" onclick="calculateEarnings()">Oblicz zarobki</button>
+    </form>
+    <h2 id="result"></h2>
+    <table id="summary-table" style="display: none;">
+        <thead>
+            <tr>
+                <th>Parametr</th>
+                <th>Wartość</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Całkowite zarobki</td>
+                <td id="total-earnings"></td>
+            </tr>
+            <tr>
+                <td>Spłata długu</td>
+                <td id="debt-payment"></td>
+            </tr>
+            <tr>
+                <td>Pozostały dług</td>
+                <td id="remaining-debt"></td>
+            </tr>
+            <tr>
+                <td>Zarobki po spłacie długu</td>
+                <td id="final-earnings"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
