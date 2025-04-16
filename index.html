@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Zarobków na YouTube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulator Zarobków na YouTube</h1>
+    <form id="calculator-form">
+        <label for="views">Wpisz liczbę wyświetleń:</label>
+        <input type="number" id="views" placeholder="np. 1000000" required>
+        <br><br>
+        <label for="cpm">CPM (zł za 1000 wyświetleń):</label>
+        <input type="number" id="cpm" placeholder="np. 5" required>
+        <br><br>
+        <label for="type">Typ filmu:</label>
+        <select id="type">
+            <option value="standard">Bez teledysku</option>
+            <option value="music">Teledysk (+20%)</option>
+        </select>
+        <br><br>
+        <label for="label-deal">Czy współpracujesz z wytwórnią?</label>
+        <input type="checkbox" id="label-deal">
+        <br><br>
+        <label for="bonus">Premia (w zł):</label>
+        <input type="number" id="bonus" placeholder="np. 100" value="0">
+        <br><br>
+        <h2>Koszty prowadzenia kanału</h2>
+        <label for="fixed-costs">Koszty stałe (np. sprzęt) w zł:</label>
+        <input type="number" id="fixed-costs" placeholder="np. 500" value="0">
+        <br><br>
+        <label for="variable-costs">Koszty zmienne (np. reklama, edycja) w zł:</label>
+        <input type="number" id="variable-costs" placeholder="np. 200" value="0">
+        <br><br>
+        <h2>Przewidywanie wzrostu kanału</h2>
+        <label for="growth-rate">Przewidywany miesięczny wzrost wyświetleń (%):</label>
+        <input type="number" id="growth-rate" placeholder="np. 10" value="0">
+        <br><br>
+        <label for="months">Ilość miesięcy do symulacji:</label>
+        <input type="number" id="months" placeholder="np. 12" value="0">
+        <br><br>
+        <h2>Kalkulator współpracy z markami</h2>
+        <label for="sponsored-videos">Liczba sponsorowanych filmów:</label>
+        <input type="number" id="sponsored-videos" placeholder="np. 5" value="0">
+        <br><br>
+        <label for="sponsorship-rate">Stawka za jeden film (w zł):</label>
+        <input type="number" id="sponsorship-rate" placeholder="np. 1000" value="0">
+        <br><br>
+        <button type="button" onclick="calculateEarnings()">Oblicz zarobki</button>
+    </form>
+    <h2 id="result"></h2>
+</body>
+<script src="script.js"></script>
+</html>
