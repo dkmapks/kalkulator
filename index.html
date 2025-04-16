@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Zarobków na YouTube</title>
+</head>
+<body>
+    <h1>Kalkulator Zarobków na YouTube</h1>
+    <form id="calculator-form">
+        <label for="views">Wpisz liczbę wyświetleń:</label>
+        <input type="number" id="views" placeholder="np. 1000000" required>
+        <br><br>
+        <label for="cpm">CPM (zł za 1000 wyświetleń):</label>
+        <input type="number" id="cpm" placeholder="np. 5" required>
+        <br><br>
+        <label for="type">Typ filmu:</label>
+        <select id="type">
+            <option value="standard">Bez teledysku</option>
+            <option value="music">Teledysk (+20%)</option>
+        </select>
+        <br><br>
+        <label for="label-deal">Czy współpracujesz z wytwórnią?</label>
+        <input type="checkbox" id="label-deal">
+        <br><br>
+        <label for="bonus">Premia (w zł):</label>
+        <input type="number" id="bonus" placeholder="np. 100" value="0">
+        <br><br>
+        <label for="debt">Dług wobec wytwórni (w zł):</label>
+        <input type="number" id="debt" placeholder="np. 5000" value="0">
+        <br><br>
+        <label for="repayment">Procent zarobków na spłatę długu (%):</label>
+        <input type="number" id="repayment" placeholder="np. 20" value="0">
+        <br><br>
+        <button type="button" onclick="calculateEarnings()">Oblicz zarobki</button>
+    </form>
+    <h2 id="result"></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
